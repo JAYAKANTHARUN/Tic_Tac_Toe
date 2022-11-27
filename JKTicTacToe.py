@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox,filedialog
 from PIL import ImageTk,Image
-import os
 
 def quitgame():
     messagebox.showinfo("MESSAGE","THANK YOU FOR PLAYING")
@@ -30,17 +29,17 @@ def startgame():
     def checkwin():
         global win
         if (button1['text']=="X" and button2['text']=="X" and button3['text']=="X") or (button4['text']=="X" and button5['text']=="X" and button6['text']=="X") or (button7['text']=="X" and button8['text']=="X" and button9['text']=="X") or (button1['text']=="X" and button4['text']=="X" and button7['text']=="X") or (button2['text']=="X" and button5['text']=="X" and button8['text']=="X") or (button3['text']=="X" and button6['text']=="X" and button9['text']=="X") or (button1['text']=="X" and button5['text']=="X" and button9['text']=="X") or (button3['text']=="X" and button5['text']=="X" and button7['text']=="X"):
-            messagebox.showinfo("MESSAGE","PLAYER 1 WINS")
+            messagebox.showinfo("MESSAGE","PLAYER 1 WINS",master=root)
             win=1
             root.destroy()
         elif (button1['text']=="O" and button2['text']=="O" and button3['text']=="O") or (button4['text']=="O" and button5['text']=="O" and button6['text']=="O") or (button7['text']=="O" and button8['text']=="O" and button9['text']=="O") or (button1['text']=="O" and button4['text']=="O" and button7['text']=="O") or (button2['text']=="O" and button5['text']=="O" and button8['text']=="O") or (button3['text']=="O" and button6['text']=="O" and button9['text']=="O") or (button1['text']=="O" and button5['text']=="O" and button9['text']=="O") or (button3['text']=="O" and button5['text']=="O" and button7['text']=="O"):
-            messagebox.showinfo("MESSAGE","PLAYER 2 WINS")
+            messagebox.showinfo("MESSAGE","PLAYER 2 WINS",master=root)
             win=1
             root.destroy()    
 
     def checkdraw():
         if count==9 and win==0:
-            messagebox.showinfo("MESSAGE","GAME DRAW")
+            messagebox.showinfo("MESSAGE","GAME DRAW",master=root)
             root.destroy()
 
     def buttonclick1():
@@ -57,7 +56,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)
         checkwin()    
         checkdraw()    
     def buttonclick2():
@@ -74,7 +73,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)
         checkwin()
         checkdraw() 
     def buttonclick3():
@@ -91,7 +90,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)
         
         checkwin()
         checkdraw() 
@@ -109,7 +108,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")  
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)  
         checkwin()
         checkdraw()                                
     def buttonclick5():
@@ -126,7 +125,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)
         checkwin()
         checkdraw()     
     def buttonclick6():
@@ -143,7 +142,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)
         checkwin()
         checkdraw()     
     def buttonclick7():
@@ -160,7 +159,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")  
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)  
         checkwin()
         checkdraw()                           
     def buttonclick8():
@@ -177,7 +176,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)
         checkwin()
         checkdraw()     
     def buttonclick9():
@@ -194,7 +193,7 @@ def startgame():
             flag=0
             count+=1
         else:
-            messagebox.showerror("ERROR","INVALID SELECTION , CLICK UNCLICKED BUTTON")  
+            messagebox.showerror("ERROR","INVALID OPERATION",master=root)  
         checkwin()
         checkdraw()                    
 
